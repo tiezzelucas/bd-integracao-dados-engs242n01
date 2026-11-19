@@ -65,8 +65,11 @@
 ## Erros encontrados no DDL e como foram corrigidos
 
 | Tabela | Erro | Correção |
-| --- | --- | --- |
-|  |  |  |
+| :--- | :--- | :--- | :--- |
+| produtos_filial | Chave primária referenciava uma coluna inexistente | Ajustada para utilizar filial_id e produto_id |
+| produtos_filial | Nome errado | Errado: idfonecedor/Correto: idfornecedor |
+| fornecedor | Chave primária referenciava uma coluna inexistente | Ajustada para utilizar somente o identificador do fornecedor |
+| entradas_mercadoria | Chave primária utilizava ordem_compra, coluna ausente na estrutura original | Inclusão da coluna ordem_compra |
 
 ## Erros encontrados no script de importação e como foram corrigidos
 
@@ -76,14 +79,8 @@
 
 ## Tratamentos aplicados aos dados
 
-(conversão de tipos, validações, normalizações)
-
-## Conferência final
-
-| Tabela | Linhas na planilha | Linhas no banco |
-| --- | --- | --- |
-| fornecedor |  |  |
-| produtos_filial |  |  |
-| pedido_compra |  |  |
-| entradas_mercadoria |  |  |
-| venda |  |  |
+* Conversão de datas para o formato aceito pelo MySQL.
+* Conversão de valores numéricos.
+* Tratamento de campos vazios.
+* Padronização de identificadores.
+* Conferência dos tipos de dados.
