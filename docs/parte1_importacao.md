@@ -46,6 +46,22 @@
 | entradas_mercadoria | filial_id | Número inteiro | 	Identificador da filial |
 | entradas_mercadoria | custo_unitario | Número decimal | Custo unitário do produto |
 
+| Aba | Coluna | Tipo | Observação |
+| :--- | :--- | :--- | :--- |
+| produtos_filial | filial_id | Número inteiro | Identificador da filial |
+| produtos_filial | idproduto | Texto | Identificador do produto |
+| produtos_filial | descricao | Texto | Descrição do produto |
+| produtos_filial | estoque | Número inteiro | Quantidade disponível em estoque |
+| produtos_filial | preco_unitario | Número decimal | Preço unitário do produto |
+| produtos_filial | preco_compra | Número decimal | Preço de compra do produto |
+| produtos_filial | preco_venda | Número decimal | Preço de venda do produto |
+| produtos_filial | idfornecedor | Texto | Identificador do fornecedor |
+
+| Aba | Coluna | Tipo | Observação |
+| :--- | :--- | :--- | :--- |
+| fornecedor | idfornecedor | Texto | Identificador do fornecedor |
+| fornecedor | razao_social | Texto | Razão social do fornecedor |
+
 ## Erros encontrados no DDL e como foram corrigidos
 
 | Tabela | Erro | Correção |
