@@ -12,6 +12,7 @@
 ## Estrutura da planilha
 
 | Aba | Coluna | Tipo | Observação |
+| :--- | :--- | :--- | :--- |
 | venda | venda_id | Número inteiro | Identificador da venda |
 | venda | data_emissao | Data | Data de emissão da venda |
 | venda | horariomov | Hora | Horário da movimentação |
@@ -21,7 +22,6 @@
 | venda | filial_id | Número inteiro | Identificador da filial |
 | venda | item | Número inteiro | Número do item da venda |
 | venda | unidade_medida | Texto | Unidade de medida do produto |
-
 |  |  |  |  |
 
 ## Erros encontrados no DDL e como foram corrigidos
