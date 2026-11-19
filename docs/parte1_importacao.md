@@ -22,7 +22,29 @@
 | venda | filial_id | Número inteiro | Identificador da filial |
 | venda | item | Número inteiro | Número do item da venda |
 | venda | unidade_medida | Texto | Unidade de medida do produto |
-|  |  |  |  |
+
+| Aba | Coluna | Tipo | Observação |
+| :--- | :--- | :--- | :--- |
+| pedido_compra | descricao_produto | Texto | Descrição do produto |
+| pedido_compra | ordem_compra | Número inteiro | Identificador da ordem de compra |
+| pedido_compra | qtde_pedida | Número inteiro | Quantidade solicitada |
+| pedido_compra | filial_id | Número inteiro | Identificador da filial |
+| pedido_compra | data_entrega | Data | Data prevista para entrega |
+| pedido_compra | qtde_entregue | Número inteiro | Quantidade já entregue |
+| pedido_compra | preco_compra | Número decimal | Preço de compra do produto |
+| pedido_compra | fornecedor_id | Número inteiro | Identificador numérico do fornecedor |
+
+| Aba | Coluna | Tipo | Observação |
+| :--- | :--- | :--- | :--- |
+| entradas_mercadoria | data_entrada | Data | Data de recebimento da mercadoria |
+| entradas_mercadoria | nro_nfe | Texto | Número da nota fiscal eletrônica |
+| entradas_mercadoria | item | Número inteiro | Número do item recebido |
+| entradas_mercadoria | produto_id | Texto | Identificador do produto |
+| entradas_mercadoria | descricao_produto | Texto | Descrição do produto |
+| entradas_mercadoria | ordem_compra | Número inteiro | Identificador da ordem de compra |
+| entradas_mercadoria | qtde_recebida | Número inteiro | Quantidade recebida |
+| entradas_mercadoria | filial_id | Número inteiro | 	Identificador da filial |
+| entradas_mercadoria | custo_unitario | Número decimal | Custo unitário do produto |
 
 ## Erros encontrados no DDL e como foram corrigidos
 
