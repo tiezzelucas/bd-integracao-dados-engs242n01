@@ -65,9 +65,9 @@
 ## Erros encontrados no DDL e como foram corrigidos
 
 | Tabela | Erro | Correção |
-| :--- | :--- | :--- | :--- |
+| :--- | :--- | :--- |
 | produtos_filial | Chave primária referenciava uma coluna inexistente | Ajustada para utilizar filial_id e produto_id |
-| produtos_filial | Nome errado | Errado: idfonecedor/Correto: idfornecedor |
+| produtos_filial | Nome errado | Errado: idfonecedor Correto: idfornecedor |
 | fornecedor | Chave primária referenciava uma coluna inexistente | Ajustada para utilizar somente o identificador do fornecedor |
 | entradas_mercadoria | Chave primária utilizava ordem_compra, coluna ausente na estrutura original | Inclusão da coluna ordem_compra |
 
