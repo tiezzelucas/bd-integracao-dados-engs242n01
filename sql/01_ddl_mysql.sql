@@ -1,4 +1,4 @@
--- Versão corrigida dos inserts
+-- Versão corrigida dos CRATE TABLE
 
 CREATE TABLE venda (
     venda_id BIGINT NOT NULL,
@@ -34,25 +34,25 @@ CREATE TABLE entradas_mercadoria (
     ordem_compra DOUBLE NOT NULL,
     data_entrada DATE NULL,
     nro_nfe VARCHAR(255) NOT NULL,
-    item INT DEFAULT 0 NOT NULL,
+    item INT DEFAULT 0 NOT NULL, -- DOUBLE -> INT // ALTERAÇÃO DE TIPO DE DADO
     produto_id VARCHAR(25) DEFAULT '0' NOT NULL,
     descricao_produto VARCHAR(255) NULL,
     qtde_recebida DOUBLE NULL,
     filial_id INT NULL,
     custo_unitario DECIMAL(12, 4) DEFAULT 0 NOT NULL,
-    CONSTRAINT entradas_mercadoria_pkey PRIMARY KEY (ordem_compra, item, produto_id, nro_nfe)
+    CONSTRAINT entradas_mercadoria_pkey PRIMARY KEY (ordem_compra, item, produto_id, nro_nfe) -- REFERENCIAVA COLUNA INEXISTENTE
 );
  
 CREATE TABLE produtos_filial (
-    filial_id INT NOT NULL,
-    produto_id VARCHAR(25) NOT NULL,
-    decricao VARCHAR(255) NOT NULL,
+    filial_id INT NOT NULL, --INT NULL -> INT NOT NULL // RESTRINÇÃO DE VALORES NULOS
+    produto_id VARCHAR(25) NOT NULL, -- VARCHAR(255) -> VARCHAR(25) // REDUÇÃO DE VALOR
+    decricao VARCHAR(255) NOT NULL, 
     estoque DOUBLE DEFAULT 0 NOT NULL,
     preco_unitario DOUBLE DEFAULT 0 NOT NULL,
     preco_compra DOUBLE DEFAULT 0 NOT NULL,
     preco_venda DOUBLE DEFAULT 0 NOT NULL,
-    idfornecedor INT NULL,
-    CONSTRAINT produtos_filial_pkey PRIMARY KEY (filial_id, produto_id)
+    idfornecedor INT NULL, -- idfonecedor -> idfornecedor // CORREÇÃO DE NOME 
+    CONSTRAINT produtos_filial_pkey PRIMARY KEY (filial_id, produto_id) -- (filial_id, idproduto) -> (filial_id, produto_id) // COREÇÃO DE REFERÊNCIAS
 );
  
 CREATE TABLE fornecedor (
